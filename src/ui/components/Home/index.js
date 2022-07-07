@@ -1,6 +1,5 @@
 import React from "react";
 import Heading from "@tds/core-heading";
-import { Switch, Link, WillMatch, Redirect, Route } from "react-router-dom";
 import FlexGrid from "@tds/core-flex-grid";
 import Box from "@tds/core-box";
 import ButtonLink from "@tds/core-button-link";

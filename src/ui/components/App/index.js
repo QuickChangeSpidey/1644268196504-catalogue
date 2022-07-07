@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "../Home";
 import WatchesPage from "../Watches/watchesPage.jsx";
 import IphonePage from "../Iphones/iPhonePage.jsx";
+import NotFound from "../NotFound";
 
 const App = () => (
   <Router>
@@ -15,6 +16,9 @@ const App = () => (
       </Route>
       <Route path="/iphones">
         <IphonePage />
+      </Route>
+      <Route exact path="*">
+        <NotFound />
       </Route>
     </Switch>
   </Router>
