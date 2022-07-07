@@ -6,7 +6,7 @@ import Box from "@tds/core-box";
 import ButtonLink from "@tds/core-button-link";
 import Text from "@tds/core-text";
 
-const Home = () => (
+const IphonePage = () => (
   <FlexGrid>
     <FlexGrid.Row xsReverse={true} smReverse={true} mdReverse={false}>
       <FlexGrid.Col xs={12} md={6}>
@@ -21,9 +21,6 @@ const Home = () => (
             2022
           </Text>
           <div>
-            <ButtonLink>Watches</ButtonLink>
-          </div>
-          <div>
             <ButtonLink>iPhones</ButtonLink>
           </div>
         </Box>
@@ -32,4 +29,4 @@ const Home = () => (
   </FlexGrid>
 );
 
-export default Home;
+export default IphonePage;
