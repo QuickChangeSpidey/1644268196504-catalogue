@@ -11,21 +11,15 @@ const Home = () => (
     <FlexGrid.Row xsReverse={true} smReverse={true} mdReverse={false}>
       <FlexGrid.Col xs={12} md={6}>
         <Box between={3}>
-          <Box between={4}>
-            <Heading level="h1" tag="h2">
-              Telus App Demo
-            </Heading>
-          </Box>
+          <Heading level="h1" tag="h2">
+            Telus App Demo
+          </Heading>
           <Text>
             This is a Telus interview app Demo built by Akshay Pandey on Jul 7,
             2022
           </Text>
-          <div>
-            <ButtonLink>Watches</ButtonLink>
-          </div>
-          <div>
-            <ButtonLink>iPhones</ButtonLink>
-          </div>
+          <ButtonLink href="/watches">Watches</ButtonLink>
+          <ButtonLink href="/iPhones">iPhones</ButtonLink>
         </Box>
       </FlexGrid.Col>
     </FlexGrid.Row>
