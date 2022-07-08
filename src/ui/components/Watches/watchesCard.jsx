@@ -28,10 +28,8 @@ const WatchCard = (props) => {
           </FlexGrid.Row>
         </FlexGrid>
         <Box inset={1}>
-          <Heading level="h3">Apple</Heading>
-          <Heading level="h2">
-            Watch Series 6 (GPS + Cellular) - Aluminum
-          </Heading>
+          <Heading level="h3">{props.brand}</Heading>
+          <Heading level="h2">{props.name}</Heading>
 
           <Box vertical={2}>
             <Paragraph size="medium">
@@ -48,7 +46,7 @@ const WatchCard = (props) => {
                   <PriceLockup
                     size="small"
                     topText="Starting at"
-                    price="25"
+                    price={props.price}
                     signDirection="left"
                     rateText="/month"
                     bottomText="On a 2-year Easy Share Premium Plus Plan"
