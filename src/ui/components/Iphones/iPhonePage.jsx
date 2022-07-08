@@ -4,6 +4,7 @@ import FlexGrid from "@tds/core-flex-grid";
 import Box from "@tds/core-box";
 import ButtonLink from "@tds/core-button-link";
 import Text from "@tds/core-text";
+import IphoneCard from "./iPhoneCard.jsx";
 
 const IphonePage = () => (
   <FlexGrid>
