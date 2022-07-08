@@ -4,13 +4,21 @@ import Box from "@tds/core-box";
 import ButtonLink from "@tds/core-button-link";
 import Text from "@tds/core-text";
 import WatchCard from "./watchesCard.jsx";
+import { watch } from "../../../model/watch.jsx";
 
 const WatchesPage = () => {
+  const [watches, setWatches] = React.useState([]);
+
   React.useEffect(() => {
     fetch("http://localhost:8081/watches")
-      .then((results) => results.json())
-      .then((data) => {
-        console.log(data);
+      .then((res) => res.json())
+      .then((response) => {
+        let devices = [];
+        response.data.forEach((item) => {
+          let device = new watch(item.name, item.brand, item.price);
+          devices.push(device);
+        });
+        setWatches(devices);
       });
   }, []);
 

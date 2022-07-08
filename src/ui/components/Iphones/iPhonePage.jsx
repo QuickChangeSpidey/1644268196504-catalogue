@@ -5,13 +5,21 @@ import ButtonLink from "@tds/core-button-link";
 import Text from "@tds/core-text";
 import IphoneCard from "./iPhoneCard.jsx";
 import FlexGrid from "@tds/core-flex-grid";
+import { phone } from "../../../model/phone.jsx";
 
 const IphonePage = () => {
+  const [iPhones, setIphones] = React.useState([]);
+
   React.useEffect(() => {
     fetch("http://localhost:8081/iphones")
-      .then((results) => results.json())
-      .then((data) => {
-        console.log(data);
+      .then((res) => res.json())
+      .then((response) => {
+        let devices = [];
+        response.data.forEach((item) => {
+          let device = new phone(item.name, item.brand, item.price);
+          devices.push(device);
+        });
+        setIphones(devices);
       });
   }, []);
 
