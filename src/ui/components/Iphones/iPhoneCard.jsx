@@ -2,10 +2,8 @@ import React from "react";
 import Card from "@tds/core-card";
 import Box from "@tds/core-box";
 import Heading from "@tds/core-heading";
-import Paragraph from "@tds/core-paragraph";
 import PriceLockup from "@tds/core-price-lockup";
 import { FootnoteLink } from "@tds/core-terms-and-conditions";
-import HairlineDivider from "@tds/core-hairline-divider";
 import FlexGrid from "@tds/core-flex-grid";
 import Image from "@tds/core-image";
 
