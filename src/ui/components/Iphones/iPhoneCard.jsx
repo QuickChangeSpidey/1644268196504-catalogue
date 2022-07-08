@@ -13,59 +13,26 @@ const IphoneCard = (props) => {
   return (
     <Box inline between={3}>
       <Card>
-        <Box between={3}>
-          <Image
-            src={"http://localhost:8081/images/iphone.jpg"}
-            alt="apple watch showing time"
-            width={200}
-            height={200}
-          />
-        </Box>
+        <FlexGrid>
+          <FlexGrid.Row horizontalAlign="center">
+            <FlexGrid.Col>
+              <Box vertical={2}>
+                <Image
+                  src={"http://localhost:8081/images/iphone.jpg"}
+                  alt="apple watch showing time"
+                  width={200}
+                  height={200}
+                />
+              </Box>
+            </FlexGrid.Col>
+          </FlexGrid.Row>
+        </FlexGrid>
         <Box inset={1}>
-          <Heading level="h3">Apple</Heading>
-          <Heading level="h2">
-            Watch Series 6 (GPS + Cellular) - Aluminum
-          </Heading>
-
-          <Box vertical={2}>
-            <Paragraph size="medium">
-              Get a new smartphone for $0
-              <br />
-              on a 2-year plan.
-            </Paragraph>
-          </Box>
-
+          <Heading level="h3">Huawei</Heading>
+          <Heading level="h2">P30 Lite</Heading>
           <FlexGrid gutter={false}>
             <FlexGrid.Row horizontalAlign="start">
               <FlexGrid.Col>
-                <Box>
-                  <PriceLockup
-                    size="small"
-                    topText="Starting at"
-                    price="25"
-                    signDirection="left"
-                    rateText="/month"
-                    bottomText="On a 2-year Easy Share Premium Plus Plan"
-                    a11yText="25 dollars per month"
-                    footnoteLinks={
-                      <FootnoteLink
-                        number={[7, 8]}
-                        onClick={(number, ref) => {}}
-                        copy="en"
-                      />
-                    }
-                  />
-                </Box>
-              </FlexGrid.Col>
-
-              <Box inset={2}>
-                <Box inline between={2}>
-                  <HairlineDivider vertical />
-                  <Box vertical={7} />
-                </Box>
-              </Box>
-
-              <FlexGrid.Col horizontalAlign={{ xs: "center", md: "left" }}>
                 <Box>
                   <PriceLockup
                     size="small"
