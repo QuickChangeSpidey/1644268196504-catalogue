@@ -6,8 +6,9 @@ import PriceLockup from "@tds/core-price-lockup";
 import { FootnoteLink } from "@tds/core-terms-and-conditions";
 import FlexGrid from "@tds/core-flex-grid";
 import Image from "@tds/core-image";
+import PropTypes from "prop-types";
 
-const IphoneCard = (props) => {
+const IphoneCard = ({ name = "", brand = "", price = 0 }) => {
   return (
     <Box inline between={3}>
       <Card>
@@ -26,8 +27,8 @@ const IphoneCard = (props) => {
           </FlexGrid.Row>
         </FlexGrid>
         <Box inset={1}>
-          <Heading level="h3">{props.brand}</Heading>
-          <Heading level="h2">{props.name}</Heading>
+          <Heading level="h3">{brand}</Heading>
+          <Heading level="h2">{name}</Heading>
           <FlexGrid gutter={false}>
             <FlexGrid.Row horizontalAlign="start">
               <FlexGrid.Col>
@@ -35,7 +36,7 @@ const IphoneCard = (props) => {
                   <PriceLockup
                     size="small"
                     topText="Starting at"
-                    price={props.price}
+                    price={price}
                     signDirection="left"
                     rateText="/month"
                     bottomText="On a 2-year Easy Share Premium Plus Plan"
@@ -56,6 +57,12 @@ const IphoneCard = (props) => {
       </Card>
     </Box>
   );
+};
+
+IphoneCard.propTypes = {
+  name: PropTypes.string,
+  price: PropTypes.number,
+  brand: PropTypes.string,
 };
 
 export default IphoneCard;
