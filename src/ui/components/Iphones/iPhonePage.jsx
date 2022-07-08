@@ -39,15 +39,13 @@ const IphonePage = () => {
       </Box>
       <FlexGrid>
         <FlexGrid.Row distribute="between">
-          <FlexGrid.Col>
-            <IphoneCard />
-          </FlexGrid.Col>
-          <FlexGrid.Col>
-            <IphoneCard />
-          </FlexGrid.Col>
-          <FlexGrid.Col>
-            <IphoneCard />
-          </FlexGrid.Col>
+          {iPhones.map((phone, index) => {
+            return (
+              <FlexGrid.Col>
+                <IphoneCard />
+              </FlexGrid.Col>
+            );
+          })}
         </FlexGrid.Row>
       </FlexGrid>
     </>

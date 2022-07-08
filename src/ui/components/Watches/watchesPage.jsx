@@ -5,6 +5,7 @@ import ButtonLink from "@tds/core-button-link";
 import Text from "@tds/core-text";
 import WatchCard from "./watchesCard.jsx";
 import { watch } from "../../../model/watch.jsx";
+import FlexGrid from "@tds/core-flex-grid";
 
 const WatchesPage = () => {
   const [watches, setWatches] = React.useState([]);
@@ -36,9 +37,17 @@ const WatchesPage = () => {
       <Box inset={4}>
         <ButtonLink href="/">Back</ButtonLink>
       </Box>
-      <Box inset={4}>
-        <WatchCard />
-      </Box>
+      <FlexGrid>
+        <FlexGrid.Row distribute="between">
+          {watches.map((watch, index) => {
+            return (
+              <FlexGrid.Col>
+                <WatchCard />
+              </FlexGrid.Col>
+            );
+          })}
+        </FlexGrid.Row>
+      </FlexGrid>
     </>
   );
 };
