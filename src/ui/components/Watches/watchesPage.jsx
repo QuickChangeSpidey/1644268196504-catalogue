@@ -41,8 +41,8 @@ const WatchesPage = () => {
         <FlexGrid.Row distribute="between">
           {watches.map((watch, index) => {
             return (
-              <FlexGrid.Col>
-                <WatchCard />
+              <FlexGrid.Col key={index}>
+                <WatchCard {...watch} />
               </FlexGrid.Col>
             );
           })}

@@ -8,7 +8,6 @@ import FlexGrid from "@tds/core-flex-grid";
 import Image from "@tds/core-image";
 
 const IphoneCard = (props) => {
-  const { name, price, brand } = props;
   return (
     <Box inline between={3}>
       <Card>

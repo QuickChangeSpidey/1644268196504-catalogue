@@ -41,8 +41,8 @@ const IphonePage = () => {
         <FlexGrid.Row distribute="between">
           {iPhones.map((phone, index) => {
             return (
-              <FlexGrid.Col>
-                <IphoneCard />
+              <FlexGrid.Col key={index}>
+                <IphoneCard {...phone} />
               </FlexGrid.Col>
             );
           })}
