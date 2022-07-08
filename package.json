@@ -5,7 +5,8 @@
     "dev:ui": "webpack serve",
     "dev:server": "node ./src/server.js",
     "dev": "concurrently --kill-others \"npm run dev:ui\" \"npm run dev:server\"",
-    "unit": "jest"
+    "unit": "jest",
+    "test": "jest"
   },
   "dependencies": {
     "@tds/core-box": "^2.4.3",
