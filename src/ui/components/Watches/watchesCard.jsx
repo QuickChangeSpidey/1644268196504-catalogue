@@ -13,10 +13,14 @@ const WatchCard = (props) => {
   return (
     <Box inline between={3}>
       <Card>
-        <Image
-          src={"http://localhost:8081/images/watch.jpg"}
-          alt="apple watch showing time"
-        />
+        <Box between={3}>
+          <Image
+            src={"http://localhost:8081/images/watch.jpg"}
+            alt="apple watch showing time"
+            width={200}
+            height={200}
+          />
+        </Box>
         <Box inset={1}>
           <Heading level="h3">Apple</Heading>
           <Heading level="h2">
