@@ -16,10 +16,12 @@ const WatchesPage = () => (
         2022
       </Text>
     </Box>
-    <Box horizontal={4} vertical={1}>
+    <Box inset={4}>
       <ButtonLink href="/">Back</ButtonLink>
     </Box>
-    <WatchCard />
+    <Box inset={4}>
+      <WatchCard />
+    </Box>
   </>
 );
 
