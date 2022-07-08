@@ -7,28 +7,34 @@ import PriceLockup from "@tds/core-price-lockup";
 import { FootnoteLink } from "@tds/core-terms-and-conditions";
 import HairlineDivider from "@tds/core-hairline-divider";
 import FlexGrid from "@tds/core-flex-grid";
-import Text from "@tds/core-text";
+import Image from "@tds/core-image";
 
 const WatchCard = (props) => {
   return (
     <Box inline between={3}>
       <Card>
+        <Image
+          src={"http://localhost:8081/images/watch.jpg"}
+          alt="apple watch showing time"
+        />
         <Box inset={1}>
           <Heading level="h3">Apple</Heading>
           <Heading level="h2">
             Watch Series 6 (GPS + Cellular) - Aluminum
           </Heading>
 
-          <Paragraph size="medium">
-            Get a new smartphone for $0
-            <br />
-            on a 2-year plan.
-          </Paragraph>
+          <Box vertical={2}>
+            <Paragraph size="medium">
+              Get a new smartphone for $0
+              <br />
+              on a 2-year plan.
+            </Paragraph>
+          </Box>
 
-          <FlexGrid>
-            <FlexGrid.Row>
+          <FlexGrid gutter={false}>
+            <FlexGrid.Row horizontalAlign="start">
               <FlexGrid.Col>
-                <Box vertical={2}>
+                <Box>
                   <PriceLockup
                     size="small"
                     topText="Starting at"
@@ -47,15 +53,15 @@ const WatchCard = (props) => {
                   />
                 </Box>
               </FlexGrid.Col>
-              <FlexGrid.Col>
-                <Box vertical={2}>
-                  <Box inline between={4}>
-                    <HairlineDivider vertical />
-                    <Box vertical={7} />
-                  </Box>
+
+              <Box inset={2}>
+                <Box inline between={2}>
+                  <HairlineDivider vertical />
+                  <Box vertical={7} />
                 </Box>
-              </FlexGrid.Col>
-              <FlexGrid.Col>
+              </Box>
+
+              <FlexGrid.Col horizontalAlign={{ xs: "center", md: "left" }}>
                 <Box>
                   <PriceLockup
                     size="small"
